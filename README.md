@@ -61,3 +61,5 @@ Create a tool for LLM to search and fins context in the database
 - try it out and check what happends in logfire
 
 
+
+

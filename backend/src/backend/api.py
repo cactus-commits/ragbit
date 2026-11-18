@@ -20,3 +20,4 @@ async def query_documentation(query: Prompt):
     return result.output
 
 # uv run uvicorn api:app --reload
+# add /docs in the url

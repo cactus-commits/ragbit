@@ -31,4 +31,4 @@ def layout():
 if __name__ == "__main__":
     layout()
 
-    # uv run streamlit app.py
+    # uv run streamlit run app.py
