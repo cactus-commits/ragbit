@@ -7,7 +7,14 @@ authors = [
     { name = "cactus-commits", email = "aurora.dev@gmai.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "pydantic-ai", 
+    "lancedb", 
+    "fastapi", 
+    "logfire", 
+    "logfire[fastapi]", 
+    "cohere" 
+]
 
 [project.scripts]
 backend = "backend:main"
