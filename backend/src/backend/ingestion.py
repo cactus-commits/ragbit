@@ -5,6 +5,7 @@ import time
 from backend.data_models import Article
 
 
+
 # Creates a folder in the vector database and connects
 def setup_vector_db(path):
     Path(path).mkdir(exist_ok=True)
@@ -40,3 +41,7 @@ def ingest_docs_to_vector_db(table):
         time.sleep(10)
 
 
+
+if __name__ == "__main__":
+    vector_db = setup_vector_db(VECTOR_DATABASE_PATH)
+    ingest_docs_to_vector_db(vector_db["articles"])

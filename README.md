@@ -30,4 +30,30 @@ uv sync all packages
 - add the functions for creating table, reading data and adding it
 - add the data models in data_models.py - created Article
 - in the ingestion script import the Article
+- run the script -> knowledbase is created 
+- try to search in the database
+
+
+### Create the RAG model 
+Create a tool for LLM to search and fins context in the database
+
+- import BaseModel from pydantic in data_models
+- create Prompt and Response using basemodel
+- create rag.py (can also be called agent) - this is both the agent and the tool it uses. The tool could also be in the mcp server
+- create model.py and set the model
+- imort model in rag
+- create the tool - @rag_agent.tool_plain
+    the tool findes the closest match and return the name, path and content of the closest document from the search. the result is sent back to the agent and is being used for the agent to draft a response to the question.
+
+
+### API - serv the answers to the user
+- create api.py
+- run api - uv run uvicorn api:app --reload
+- add logfire monitoring 
+    - create new logfire project
+    - create a new write token and add to .env LOGFIRE_TOKEN
+
+
+
+
 
