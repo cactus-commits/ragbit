@@ -55,6 +55,9 @@ Create a tool for LLM to search and fins context in the database
 
 
 ### Frontend
+- add streamlit layout in app.py
+- add assets
 
+- try it out and check what happends in logfire
 
 
