@@ -2,6 +2,7 @@ import lancedb # the database
 from backend.constants import DATA_PATH, VECTOR_DATABASE_PATH # data path to the database
 from pathlib import Path
 import time
+from backend.data_models import Article
 
 
 # Creates a folder in the vector database and connects

@@ -28,5 +28,6 @@ uv sync all packages
 - add ingestion.py in backend 
 - add the path to the db in constance (VECTOR_DATABASE_PATH = Path(__file__).parents[1] / "knowledge_base" )
 - add the functions for creating table, reading data and adding it
-- add the data models in data_models.py
+- add the data models in data_models.py - created Article
+- in the ingestion script import the Article
 
