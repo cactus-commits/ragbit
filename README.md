@@ -54,6 +54,7 @@ Create a tool for LLM to search and fins context in the database
     - create a new write token and add to .env LOGFIRE_TOKEN
 
 
+### Frontend
 
 
 
