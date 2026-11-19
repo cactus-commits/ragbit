@@ -1,5 +1,7 @@
 # ragbit
 
+![alt text](https://file%2B.vscode-resource.vscode-cdn.net/Users/alex/Downloads/image.webp?version%3D1795077787120)
+
 ### Setup folder structure and ddependencies 
 
 Add separate frontend and backend packages. this is neeeded when we dockerize later 
@@ -24,7 +26,7 @@ uv sync all packages
 - finish the script and export the text to the data folder as txt
 
 
-### Ingestion to database
+### Database
 - add ingestion.py in backend 
 - add the path to the db in constance (VECTOR_DATABASE_PATH = Path(__file__).parents[1] / "knowledge_base" )
 - add the functions for creating table, reading data and adding it
@@ -46,7 +48,7 @@ Create a tool for LLM to search and fins context in the database
     the tool findes the closest match and return the name, path and content of the closest document from the search. the result is sent back to the agent and is being used for the agent to draft a response to the question.
 
 
-### API - serv the answers to the user
+### API - serv the prompt to backend and answers to the user
 - create api.py
 - run api - uv run uvicorn api:app --reload
 - add logfire monitoring 
@@ -57,8 +59,15 @@ Create a tool for LLM to search and fins context in the database
 ### Frontend
 - add streamlit layout in app.py
 - add assets
-
 - try it out and check what happends in logfire
+
+### Dockerize fronted and backend in two different containers
+- create a folder fo dockerfiles and add a dockerfile for frontend and one for backend
+    both files pretty similar
+- create docker-compose.yaml in root - the orchestrator of both the docker containers
+    - build the compose file
+
+
 
 
 

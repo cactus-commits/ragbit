@@ -1,0 +1,12 @@
+services: 
+
+  backend: 
+    container_name: backend
+    build: 
+      context: . # menas THIS folder (.. one up - exactly like when you do cd ..)
+      dockerfile: dockerfiles/backend.dockerfile
+    ports: 
+      - "8000:8000"
+    env_file: # to find all our api keys that backend needs - this injects the env to the container we are spinning up
+      - .env
+    image: backend: v1
