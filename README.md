@@ -50,7 +50,8 @@ Create a tool for LLM to search and fins context in the database
 
 ### API - serv the prompt to backend and answers to the user
 - create api.py
-- run api - uv run uvicorn api:app --reload
+- run api - uv run uvicorn api:app --reload 
+- opens at http://localhost:8000/docs
 - add logfire monitoring 
     - create new logfire project
     - create a new write token and add to .env LOGFIRE_TOKEN
@@ -59,6 +60,7 @@ Create a tool for LLM to search and fins context in the database
 ### Frontend
 - add streamlit layout in app.py
 - add assets
+- run and open at http://localhost:8501/
 - try it out and check what happends in logfire
 
 ### Dockerize fronted and backend in two different containers
@@ -67,7 +69,10 @@ Create a tool for LLM to search and fins context in the database
 - create docker-compose.yaml in root - the orchestrator of both the docker containers
     - build the compose file
 
+- from root run docker compose up -d
+    - docker ps - see what containers are up 
 
+* optional to add a .dockerignore
 
 
 

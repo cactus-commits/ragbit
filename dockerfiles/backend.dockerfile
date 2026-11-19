@@ -1,7 +1,7 @@
-FROM python:3.23-slim # this is a python image
-
+# this is a python image
+FROM python:3.13-slim 
 # this is where the code I want to run is.- ths is what the directory will be
-WORKDIR / app/ 
+WORKDIR /app
 
 # this will copy backend to /app/backend since the line before puts us in /app
 COPY backend backend
@@ -16,7 +16,7 @@ RUN pip install --no-cache-dir uv
 WORKDIR /app/backend/src/backend
 
 # install packages
-RUN uv sync --no-dev
+RUN cd /app/backend && uv sync --no-dev
 
 # runs the api
-CMD ["uv", "run", "uvcorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uv", "run", "uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]

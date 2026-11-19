@@ -1,0 +1,6 @@
+.env
+.logfire
+**/ingestion.py
+**/pdf_to_text.py
+**/.pytest_cache
+**/*.ipynb
